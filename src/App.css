@@ -1,8 +1,23 @@
-.App {
-  text-align: center;
+html {
+  background-color: skyblue;
 }
 
-.App-logo {
+main {
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+header p {
+  font-size: 60px;
+  color: white;
+}
+
+header span {
+  font-size: 60px !important;
+  color: aqua;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +50,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
