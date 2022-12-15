@@ -1,6 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
 
+import ListForm from './Components/ListForm';
+
 function App() {
   return (
     <>
@@ -21,6 +23,7 @@ function App() {
             <span class="material-symbols-outlined">bubble_chart</span>
           </p>
         </header>
+        <ListForm />
       </main>
       {/* <div className="App">
         <header className="App-header">
