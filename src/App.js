@@ -8,7 +8,7 @@ function App() {
     <>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet" />
       </head>
       <main>
@@ -20,7 +20,7 @@ function App() {
             <span>b</span>
             <span>b</span>
             liest
-            <span class="material-symbols-outlined">bubble_chart</span>
+            <span className="material-symbols-outlined">bubble_chart</span>
           </p>
         </header>
         <ListForm />
