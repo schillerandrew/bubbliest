@@ -2,6 +2,7 @@
 import './App.css';
 
 import ListForm from './Components/ListForm';
+import Lists from './Components/Lists';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           </p>
         </header>
         <ListForm />
+        <Lists />
       </main>
       {/* <div className="App">
         <header className="App-header">
