@@ -3,18 +3,16 @@ import { render } from 'react-dom';
 
 const Lists = () => {
 
-  let textValues = Object.values(localStorage);
-  // alert(textValues);
-  // console.log(textValues);
-  // for (let i = 0; i < localStorage.length; i++) {
-  for (let i = 1; i < 5; i++) {
-    return(
-      <>
-        <p>{localStorage.getItem(localStorage.key(i))}</p>
-      </>
-    )
+  // let textValues = Object.values(localStorage);
+  let array = [];
+  if (localStorage.getItem('array')) {
+    array = JSON.parse(localStorage.getItem(localStorage.key('array')));
   }
-  // }
+  return (
+    <>
+      {array.map((item) => <li>{item}</li>)}
+    </>
+  )
 }
 
 export default Lists;
