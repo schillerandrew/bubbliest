@@ -2,7 +2,7 @@ import { useState, React } from 'react';
 
 const ListForm = () => {
 
-  const [text, setText] = useState("");
+  const [text, setText] = useState();
   let array = [];
 
   const handleSubmit = (e) => {
@@ -12,10 +12,11 @@ const ListForm = () => {
     }
     array.push(text); // push the user's text input into the array
     localStorage.setItem('array', JSON.stringify(array)); // stringify the array and set it in localStorage
+    setText(''); // clear the user form
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form id="list-form-field" onSubmit={handleSubmit}>
       <label>Enter in a text message:
         <input
           type="text"
