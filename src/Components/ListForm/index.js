@@ -7,12 +7,19 @@ const ListForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (localStorage.getItem('array')) { // if the array is in localStorage...
-      array = JSON.parse(localStorage.getItem('array')); // then parse the array and get it
+    // if the array is in localStorage...
+    if (localStorage.getItem('array')) {
+      // then parse the array and get it
+      array = JSON.parse(localStorage.getItem('array'));
     }
-    array.push(text); // push the user's text input into the array
-    localStorage.setItem('array', JSON.stringify(array)); // stringify the array and set it in localStorage
-    setText(''); // clear the user form
+    // push the user's *non-empty* text input into the array
+    if (text.length > 0) array.push(text);
+
+    // stringify the array and set it in localStorage
+    localStorage.setItem('array', JSON.stringify(array));
+
+    // clear the user form
+    setText('');
   }
 
   return (
@@ -21,7 +28,7 @@ const ListForm = () => {
         <input
           type="text"
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => { setText(e.target.value) }}
         />
       </label>
     </form>
