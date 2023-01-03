@@ -1,8 +1,8 @@
-import { useState, React } from 'react';
+import { useState, useEffect, React } from 'react';
 
 const ListForm = () => {
 
-  const [text, setText] = useState();
+  const [text, setText] = useState('');
   let array = [];
 
   const handleSubmit = (e) => {
@@ -20,7 +20,10 @@ const ListForm = () => {
 
     // clear the user form
     setText('');
+    window.location.reload(); // quick fix for re-rendering component
   }
+
+  useEffect( () => {console.log('ok')}, [text]);
 
   return (
     <form id="list-form-field" onSubmit={handleSubmit}>
